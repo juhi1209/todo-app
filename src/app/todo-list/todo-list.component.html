@@ -1,0 +1,15 @@
+
+  <div class="todoListContainer">
+    <h1>Todo List</h1>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)] ="task" placeholder="Add task here..">
+        <button type="button" class="btn btn-success" (click)="getTasks(task);"><span class="glyphicon glyphicon-plus"></span></button>
+      </div>
+      
+      <ol>
+        <li *ngFor="let t of tasks">
+          <span class="list-item">{{t}}</span>
+          <button class="remove-btn" (click)="removeTasks(t)"><span class="glyphicon glyphicon-remove"></span></button>
+        </li>
+      </ol>
+  </div>  
